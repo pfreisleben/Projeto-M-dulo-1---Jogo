@@ -3,7 +3,8 @@
 # trabalhos menos remunerados, casas melhor equipadas et cetera
 
 
-#Esse é um teste de merge
+# Esse é um teste de merge
+# Teste 2
 class Relogio:
     def __init__(self):
         self.horas = 6
