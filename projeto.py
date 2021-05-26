@@ -9,7 +9,7 @@
 # randomizar o que for possível.
 # Criação da opção 8, estoque. ESTÁ PRONTA mas pode melhorar
 
-
+# teste
 import random
 
 
