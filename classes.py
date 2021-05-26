@@ -42,31 +42,45 @@ class Casa:
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
-    
+
+    def moveis(self):
+        escolha_do_movel = input("Escolha o móvel que deseja: ")
+        estoque_de_moveis = {"Sofá de 3 lugares, retrátil 2.80m": 3000.0,
+                             "Mesa de jantar com 4 cadeiras": 2299.0}
+
     def moveis(self):
         super().__init__()
         money = self.dinheiro
         adquiridos = []
+
         estoque_de_moveis = {"sofá":3000,
         "mesa":2299,
         "video game":1450,
         "tv":1900}
+
+        estoque_de_moveis = [("sofá", 3000),
+                             ("mesa", 2299),
+                             ("video game", 1450),
+                             ("tv", 1900)]
+
         print(estoque_de_moveis)
         print(type(estoque_de_moveis))
-        escolha_do_movel = input(f"Você tem {money} \nEscolha o móvel que deseja ou sair:").lower()
-        while True:    
+        escolha_do_movel = input(
+            f"Você tem {money} \nEscolha o móvel que deseja ou sair:").lower()
+        while True:
             if escolha_do_movel == "sair":
                 print("Até logo")
                 break
             else:
                 for item in estoque_de_moveis:
                     if escolha_do_movel in estoque_de_moveis:
-    
+
                         preco = estoque_de_moveis.get(escolha_do_movel)
                         print(preco)
                         print(type(preco))
                         self.dinheiro = money - preco
-                        print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {self.dinheiro}")
+                        print(
+                            f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {self.dinheiro}")
                         adquiridos = estoque_de_moveis.pop()
                         print(f"Você já tem {adquiridos}")
                     elif escolha_do_movel in adquiridos or adquiridos == "":
@@ -77,7 +91,6 @@ class Casa:
                         break
 
 
-#=======
 
 
 class Dia:
@@ -86,7 +99,7 @@ class Dia:
         self.finalDeSemana = False
 
     def __str__(self):
-        return f"Hoje é dia {self.dia}, {self.semana()}"
+        return f"{self.dia}, {self.semana()}"
 
     # Se for sáb ou dom, FDS = True.
     def avancaDia(self):
@@ -114,4 +127,3 @@ class Dia:
             return "Sábado"
         elif self.dia == 7:
             return "Domingo"
-#>>>>>>> f8da74d132b64d8b691e5f89a99e0cc32b73c8b5
