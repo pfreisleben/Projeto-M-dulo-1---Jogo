@@ -2,6 +2,8 @@
 # Sugestão: completar com classes filhas colocando pessoas saudáveis,
 # trabalhos menos remunerados, casas melhor equipadas et cetera
 
+# Teste Salu
+
 class Relogio:
     def __init__(self):
         self.horas = 6
