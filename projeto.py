@@ -7,20 +7,20 @@
 # comprar moveis, criar uma lista de produtos - Italo - Status: Em progresso
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
 # randomizar o que for possível.
-<<<<<<< HEAD
+#<<<<<<< HEAD
 # Criação da opção 8, estoque. Italo - Status: Feito mas pode melhorar
 # Criar um segundo menu para as ideias depois do trabalho.
 
-=======
+#=======
 # Criação da opção 8, estoque. Feito mas pode melhorar
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
->>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
+#>>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
 
 import random
 from classes import Relogio, Personagem, Casa  # Fiz a importação das classes
 
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 class Relogio:
     def __init__(self):
         self.horas = 6
@@ -98,8 +98,8 @@ class Casa(Personagem):
                     else:
                         print("Produto inválido!")
                         break
-=======
->>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
+#======
+#>>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
 if(__name__ == "__main__"):
     dia = 1
     relogio = Relogio()
@@ -207,17 +207,17 @@ if(__name__ == "__main__"):
 
         elif(opcao == "8"):  # Mostra estoque de comida e remédio
             print(casa.estoque())
-<<<<<<< HEAD
+#<<<<<<< HEAD
         elif(opcao == "9"):
             casa.moveis()
-=======
+#=======
         elif(opcao == "10"):
             personagem.dormir()
             if dia == 7:
                 1
             else:
                 dia += 1
->>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
+#>>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
         elif(opcao == "0"):
             break
         else:
