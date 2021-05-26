@@ -136,7 +136,14 @@ if(__name__ == "__main__"):
             print(personagem)
             print("-=-=-")
             recebido = personagem.salario
-            if(not personagem.medicado):
+            if dia == 6 or dia == 7:
+                print(f'Você está no final de semana, não pode trabalhar!')
+                if dia == 6:
+                    dia += 1
+                elif dia == 7:
+                    dia = 1
+                continue
+            elif(not personagem.medicado):
                 print(
                     "Como você não tomou seu remédio, você ficou doente no caminho e não chegou no trabalho")
                 recebido = 0
