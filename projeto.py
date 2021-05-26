@@ -2,9 +2,9 @@
 # Sugestão: completar com classes filhas colocando pessoas saudáveis,
 # trabalhos menos remunerados, casas melhor equipadas et cetera
 #   IDEIAS
-# Variar o preço do café da manhã - Italo - Feito
+# Variar o preço do café da manhã - Italo - Status: Feito
 # desconto de salário em % e talvez até demissão de faltar demais.
-# comprar moveis, criar uma lista de produtos
+# comprar moveis, criar uma lista de produtos - Italo - Status: Em progresso
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
 # randomizar o que for possível.
 # Criação da opção 8, estoque. Feito mas pode melhorar
@@ -56,6 +56,13 @@ class Casa:
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
+    def moveis(self):
+        escolha_do_movel = input("Escolha o móvel que deseja: ")
+        estoque_de_moveis = {"Sofá de 3 lugares, retrátil 2.80m": 3000.0,
+                             "Mesa de jantar com 4 cadeiras": 2299.0,
+
+                             }
+
 
 if(__name__ == "__main__"):
     dia = 1
@@ -78,6 +85,7 @@ if(__name__ == "__main__"):
         print("6 - Comprar remédio")
         print("7 - Ir trabalhar")
         print("8 - Ver estoque de remédio e comida")
+        print("9 - Comprar móveis")
         print("0 - Sair do jogo")
         opcao = input("Escolha sua ação:")
         if(opcao == "1"):
