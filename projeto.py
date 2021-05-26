@@ -41,7 +41,7 @@ class Personagem:
         self.sujo = True
         self.fome = True
         self.medicado = False
-        self.dinheiro = 10000
+        self.dinheiro = 0
         self.salario = 100
 
     def __str__(self):
