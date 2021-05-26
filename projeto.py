@@ -7,13 +7,20 @@
 # comprar moveis, criar uma lista de produtos - Italo - Status: Em progresso
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
 # randomizar o que for possível.
+<<<<<<< HEAD
 # Criação da opção 8, estoque. Italo - Status: Feito mas pode melhorar
 # Criar um segundo menu para as ideias depois do trabalho.
 
+=======
+# Criação da opção 8, estoque. Feito mas pode melhorar
+# Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
+>>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
 
 import random
+from classes import Relogio, Personagem, Casa  # Fiz a importação das classes
 
 
+<<<<<<< HEAD
 class Relogio:
     def __init__(self):
         self.horas = 6
@@ -91,6 +98,8 @@ class Casa(Personagem):
                     else:
                         print("Produto inválido!")
                         break
+=======
+>>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
 if(__name__ == "__main__"):
     dia = 1
     relogio = Relogio()
@@ -113,20 +122,21 @@ if(__name__ == "__main__"):
         print("7 - Ir trabalhar")
         print("8 - Ver estoque de remédio e comida")
         print("9 - Comprar móveis")
+        print("10 - Dormir!")
         print("0 - Sair do jogo")
         opcao = input("Escolha sua ação:")
-        if(opcao == "1"):
+        if(opcao == "1"):  # Toma Banho, escova dentes
             personagem.sujo = False
             relogio.avancaTempo(20)
-        elif(opcao == "2"):
+        elif(opcao == "2"):  # Faz café da manhã
             if(casa.comida > 0):
                 casa.comida -= 1
                 cafe_da_manha = True
             else:
                 print("Não há comida em casa.")
             relogio.avancaTempo(15)
-        elif(opcao == "3"):
-            lanche = random.randint(5,15)
+        elif(opcao == "3"):  # Pede café da manhã
+            lanche = random.randint(5, 15)
             if(personagem.dinheiro >= lanche):
                 personagem.dinheiro -= lanche
                 cafe_da_manha = True
@@ -136,7 +146,7 @@ if(__name__ == "__main__"):
                 print(
                     f"O café da manhã custa {lanche} reais, você não tem dinheiro suficiente.")
             relogio.avancaTempo(5)
-        elif(opcao == "4"):
+        elif(opcao == "4"):  # Toma café da manhã
             if(cafe_da_manha):
                 personagem.fome = False
                 cafe_da_manha = False
@@ -144,14 +154,14 @@ if(__name__ == "__main__"):
             else:
                 print("Não tem café da manhã na sua casa.")
                 relogio.avancaTempo(5)
-        elif(opcao == "5"):
+        elif(opcao == "5"):  # Toma remédio
             if(casa.remedios > 0):
                 casa.remedios -= 1
                 personagem.medicado = True
             else:
                 print("Não tem remédio na sua casa")
             relogio.avancaTempo(5)
-        elif(opcao == "6"):
+        elif(opcao == "6"):  # Compra remédio
             if(personagem.dinheiro >= 20):
                 casa.remedios += 10
                 personagem.dinheiro -= 20
@@ -160,20 +170,13 @@ if(__name__ == "__main__"):
                 print(
                     "A cartela com 10 remédios custa 20 reais, você não tem dinheiro suficiente.")
                 relogio.avancaTempo(5)
-        elif(opcao == "7"):
+        elif(opcao == "7"):  # Vai trabalhar
             print("-=-=-")
             print("Você foi trabalhar.")
             print(personagem)
             print("-=-=-")
             recebido = personagem.salario
-            if dia == 6 or dia == 7:
-                print(f'Você está no final de semana, não pode trabalhar!')
-                if dia == 6:
-                    dia += 1
-                elif dia == 7:
-                    dia = 1
-                continue
-            elif(not personagem.medicado):
+            if(not personagem.medicado):
                 print(
                     "Como você não tomou seu remédio, você ficou doente no caminho e não chegou no trabalho")
                 recebido = 0
@@ -196,12 +199,25 @@ if(__name__ == "__main__"):
             personagem.dinheiro += recebido
             personagem.dormir()
             relogio = Relogio()
-            dia += 1
+            # Checa se é domingo, caso seja domingo, volta pro dia 1(segunda)
+            if dia == 7:
+                dia = 1
+            else:
+                dia += 1
 
-        elif(opcao == "8"):
+        elif(opcao == "8"):  # Mostra estoque de comida e remédio
             print(casa.estoque())
+<<<<<<< HEAD
         elif(opcao == "9"):
             casa.moveis()
+=======
+        elif(opcao == "10"):
+            personagem.dormir()
+            if dia == 7:
+                1
+            else:
+                dia += 1
+>>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
         elif(opcao == "0"):
             break
         else:
