@@ -16,10 +16,44 @@
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
 import random
-from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
 
 
-<<<<<<< HEAD
+class Dia:
+    def __init__(self):
+        self.dia = 1
+        self.finalDeSemana = False
+
+    def __str__(self):
+        return f"{self.dia}, {self.semana()}"
+
+    # Se for sáb ou dom, FDS = True.
+    def avancaDia(self):
+        if 6 <= self.dia <= 7:
+            self.finalDeSemana = True
+        else:
+            self.finalDeSemana = False
+        if self.dia == 7:
+            self.dia = 1
+        else:
+            self.dia += 1
+
+    def semana(self):
+        if self.dia == 1:
+            return "Segunda-feira"
+        elif self.dia == 2:
+            return "Terça-feira"
+        elif self.dia == 3:
+            return "Quarta-feira"
+        elif self.dia == 4:
+            return "Quinta-feira"
+        elif self.dia == 5:
+            return "Sexta-feira"
+        elif self.dia == 6:
+            return "Sábado"
+        elif self.dia == 7:
+            return "Domingo"
+
+
 class Relogio:
     def __init__(self):
         self.horas = 6
@@ -55,7 +89,6 @@ class Personagem:
         self.medicado = False
 
 
-
 class Casa(Personagem):
     def __init__(self):
         self.remedios = 1
@@ -63,7 +96,6 @@ class Casa(Personagem):
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
-        
 
     def moveis(self):
         super().__init__()
@@ -101,8 +133,6 @@ class Casa(Personagem):
                         break
 
 
-=======
->>>>>>> 08c877c0d22ef497a876e72bdf68379bcdd675d8
 if(__name__ == "__main__"):
     dia = Dia()
     relogio = Relogio()
