@@ -1,3 +1,4 @@
+# Este arquivo vai ser utilizando pra criar e estruturar as classes, que serão importadas no projeto principal.
 class Relogio:
     def __init__(self):
         self.horas = 6
