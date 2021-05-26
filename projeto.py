@@ -21,7 +21,6 @@ from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das cla
 
 if(__name__ == "__main__"):
     dia = Dia()
-    print(dia)
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()
