@@ -90,7 +90,7 @@ class Dia:
         self.finalDeSemana = False
 
     def __str__(self):
-        return f"Hoje é dia"
+        return f"Hoje é dia {self.dia}, {self.semana()}"
 
     # Se for sáb ou dom, FDS = True.
     def avancaDia(self):
