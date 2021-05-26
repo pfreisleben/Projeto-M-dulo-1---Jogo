@@ -7,7 +7,7 @@
 # comprar moveis, criar uma lista de produtos
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado
 # randomizar o que for possível.
-
+# Criação da opção 8, estoque. ESTÁ PRONTA mas pode melhorar
 
 
 
