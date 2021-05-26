@@ -16,42 +16,7 @@
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
 import random
-
-
-class Dia:
-    def __init__(self):
-        self.dia = 1
-        self.finalDeSemana = False
-
-    def __str__(self):
-        return f"{self.dia}, {self.semana()}"
-
-    # Se for sáb ou dom, FDS = True.
-    def avancaDia(self):
-        if 6 <= self.dia <= 7:
-            self.finalDeSemana = True
-        else:
-            self.finalDeSemana = False
-        if self.dia == 7:
-            self.dia = 1
-        else:
-            self.dia += 1
-
-    def semana(self):
-        if self.dia == 1:
-            return "Segunda-feira"
-        elif self.dia == 2:
-            return "Terça-feira"
-        elif self.dia == 3:
-            return "Quarta-feira"
-        elif self.dia == 4:
-            return "Quinta-feira"
-        elif self.dia == 5:
-            return "Sexta-feira"
-        elif self.dia == 6:
-            return "Sábado"
-        elif self.dia == 7:
-            return "Domingo"
+from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
 
 
 class Relogio:
@@ -89,6 +54,7 @@ class Personagem:
         self.medicado = False
 
 
+
 class Casa(Personagem):
     def __init__(self):
         self.remedios = 1
@@ -96,6 +62,7 @@ class Casa(Personagem):
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
+        
 
     def moveis(self):
         super().__init__()
@@ -123,14 +90,15 @@ class Casa(Personagem):
                         self.dinheiro = money - preco
                         print(
                             f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {self.dinheiro}")
-                        adquiridos = estoque_de_moveis.popitem()
-                        print(f"Você já tem {adquiridos}")
+                        #adquiridos = estoque_de_moveis.pop(key=escolha_do_movel(0))
+                        #print(f"Você já tem {adquiridos}")
                     elif escolha_do_movel in adquiridos or adquiridos == "":
                         print("Produto indisponivel, você já tem.")
                         break
                     else:
                         print("Produto inválido!")
                         break
+
 
 
 if(__name__ == "__main__"):
@@ -242,7 +210,10 @@ if(__name__ == "__main__"):
 # =======
         elif(opcao == "10"):
             personagem.dormir()
-            dia.avancaDia()
+            if dia == 7:
+                1
+            else:
+                dia += 1
 # >>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
         elif(opcao == "0"):
             break
