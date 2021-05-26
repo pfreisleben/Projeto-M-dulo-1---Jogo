@@ -19,6 +19,7 @@ import random
 from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
 
 
+<<<<<<< HEAD
 class Relogio:
     def __init__(self):
         self.horas = 6
@@ -100,9 +101,10 @@ class Casa(Personagem):
                         break
 
 
+=======
+>>>>>>> 08c877c0d22ef497a876e72bdf68379bcdd675d8
 if(__name__ == "__main__"):
     dia = Dia()
-    print(dia)
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()
