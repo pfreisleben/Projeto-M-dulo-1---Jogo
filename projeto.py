@@ -19,50 +19,6 @@ import random
 from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
 
 
-class Casa(Personagem):
-    def __init__(self):
-        self.remedios = 1
-        self.comida = 5
-
-    def estoque(self):
-        return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
-
-    def moveis(self):
-        super().__init__()
-        money = self.dinheiro
-        adquiridos = []
-        estoque_de_moveis = {"sofá": 3000,
-                             "mesa": 2299,
-                             "video game": 1450,
-                             "tv": 1900}
-        print(estoque_de_moveis)
-        print(type(estoque_de_moveis))
-        escolha_do_movel = input(
-            f"Você tem {money} \nEscolha o móvel que deseja ou sair:").lower()
-        while True:
-            if escolha_do_movel == "sair":
-                print("Até logo")
-                break
-            else:
-                for item in estoque_de_moveis:
-                    if escolha_do_movel in estoque_de_moveis:
-
-                        preco = estoque_de_moveis.get(escolha_do_movel)
-                        print(preco)
-                        print(type(preco))
-                        self.dinheiro = money - preco
-                        print(
-                            f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {self.dinheiro}")
-                        adquiridos = estoque_de_moveis.popitem()
-                        print(f"Você já tem {adquiridos}")
-                    elif escolha_do_movel in adquiridos or adquiridos == "":
-                        print("Produto indisponivel, você já tem.")
-                        break
-                    else:
-                        print("Produto inválido!")
-                        break
-
-
 if(__name__ == "__main__"):
     dia = Dia()
     print(dia)
