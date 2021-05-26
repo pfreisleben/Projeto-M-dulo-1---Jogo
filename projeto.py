@@ -7,7 +7,11 @@
 # comprar moveis, criar uma lista de produtos
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado
 # randomizar o que for possível.
-# import random
+
+
+
+
+import random
 
 class Relogio:
     def __init__(self):
@@ -48,6 +52,7 @@ class Casa:
     def __init__(self):
         self.remedios = 1
         self.comida = 5
+
     def estoque (self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
@@ -146,6 +151,10 @@ if(__name__ == "__main__"):
             personagem.dormir()
             relogio = Relogio()
             dia += 1
+
+        elif(opcao == "8"):
+            print(casa.estoque())
+
         elif(opcao == "0"):
             break
         else:
