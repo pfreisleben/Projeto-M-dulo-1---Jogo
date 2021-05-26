@@ -65,6 +65,7 @@ class Casa(Personagem):
 
 if(__name__ == "__main__"):
     dia = Dia()
+    print(dia)
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()

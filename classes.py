@@ -81,7 +81,6 @@ class Casa:
                     else:
                         print("Produto inválidoa!")
                         break
-# =======
 
 
 class Dia:
@@ -90,7 +89,7 @@ class Dia:
         self.finalDeSemana = False
 
     def __str__(self):
-        return f"Hoje é dia {self.dia}, {self.semana()}"
+        return f"{self.dia}, {self.semana()}"
 
     # Se for sáb ou dom, FDS = True.
     def avancaDia(self):
@@ -118,4 +117,3 @@ class Dia:
             return "Sábado"
         elif self.dia == 7:
             return "Domingo"
-# >>>>>>> f8da74d132b64d8b691e5f89a99e0cc32b73c8b5
