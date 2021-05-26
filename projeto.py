@@ -15,7 +15,6 @@
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
 import random
-from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
 
 
 class Relogio:
@@ -57,7 +56,7 @@ class Casa(Personagem):
     def __init__(self):
         self.remedios = 1
         self.comida = 5
-    
+
     def __str__(self):
         return f"voc~e já tem, {self.moveis}"
 
@@ -67,14 +66,14 @@ class Casa(Personagem):
     def moveis(self):
         super().__init__()
         # money = self.dinheiro
-        self.moveis = ["cama","fogão","geladeira"]
-        
+        self.moveis = ["cama", "fogão", "geladeira"]
+
         estoque_de_moveis = {"sofa": 3000,
                              "mesa": 2299,
                              "video game": 1450,
                              "tv": 11900}
         print(estoque_de_moveis)
-        
+
         escolha_do_movel = input(
             f"Você tem {self.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
         while True:
@@ -84,21 +83,18 @@ class Casa(Personagem):
             else:
                 for item in estoque_de_moveis:
                     if escolha_do_movel in estoque_de_moveis:
-                        
+
                         preco = estoque_de_moveis.get(escolha_do_movel)
-                        print('chegou aqui',preco)
+                        print('chegou aqui', preco)
                         if preco <= self.dinheiro:
                             personagem.dinheiro -= preco
                             self.moveis.append(escolha_do_movel)
                             return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
                         else:
                             return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
-                        
 
-                     
                     else:
                         return print("Produto inválido!")
-                        
 
 
 class Dia:
