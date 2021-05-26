@@ -65,8 +65,9 @@ class Casa(Personagem):
     def moveis(self):
         super().__init__()
         money = self.dinheiro
-        adquiridos = []
-        estoque_de_moveis = {"sofá": 3000,
+        self.moveis = ["cama","fogão","geladeira"]
+        print(f"Você já tem {self.moveis}")
+        estoque_de_moveis = {"sofa": 3000,
                              "mesa": 2299,
                              "video game": 1450,
                              "tv": 1900}
@@ -86,16 +87,18 @@ class Casa(Personagem):
                         print(preco)
                         print(type(preco))
                         self.dinheiro = money - preco
-                        print(
+                        self.moveis.append(escolha_do_movel)
+                        return print(
                             f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {self.dinheiro}")
                         #adquiridos = estoque_de_moveis.pop(key=escolha_do_movel(0))
-                        #print(f"Você já tem {adquiridos}")
-                    elif escolha_do_movel in adquiridos or adquiridos == "":
-                        print("Produto indisponivel, você já tem.")
-                        break
+                        print(f"Você já tem {self.moveis}")
+
+                    #elif escolha_do_movel in adquiridos:
+                    #   return print("Produto indisponivel, você já tem.")
+                        
                     else:
-                        print("Produto inválido!")
-                        break
+                        return print("Produto inválido!")
+                        
 
 
 class Dia:
@@ -237,10 +240,10 @@ if(__name__ == "__main__"):
 
         elif(opcao == "8"):  # Mostra estoque de comida e remédio
             print(casa.estoque())
-# <<<<<<< HEAD
+
         elif(opcao == "9"):
             casa.moveis()
-# =======
+
         elif(opcao == "10"):
             personagem.dormir()
             if dia == 7:
