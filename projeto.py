@@ -175,6 +175,7 @@ if(__name__ == "__main__"):
         elif(opcao == "3"):  # Pede café da manhã
             lanche = random.randint(5, 15)
             if(personagem.dinheiro >= lanche):
+                casa.comida += 1
                 personagem.dinheiro -= lanche
                 cafe_da_manha = True
                 print(
