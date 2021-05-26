@@ -1,3 +1,4 @@
+# Este arquivo vai ser utilizando pra criar e estruturar as classes, que serão importadas no projeto principal.
 class Relogio:
     def __init__(self):
         self.horas = 6
@@ -47,6 +48,7 @@ class Casa:
                              "Mesa de jantar com 4 cadeiras": 2299.0,
 
                              }
+#<<<<<<< HEAD
     def moveis(self):
         super().__init__()
         money = self.dinheiro
@@ -79,3 +81,41 @@ class Casa:
                     else:
                         print("Produto inválidoa!")
                         break
+#=======
+
+
+class Dia:
+    def __init__(self):
+        self.dia = 1
+        self.finalDeSemana = False
+
+    def __str__(self):
+        return f"Hoje é dia"
+
+    # Se for sáb ou dom, FDS = True.
+    def avancaDia(self):
+        if 6 <= self.dia <= 7:
+            self.finalDeSemana = True
+        else:
+            self.finalDeSemana = False
+        if self.dia == 7:
+            self.dia = 1
+        else:
+            self.dia += 1
+
+    def semana(self):
+        if self.dia == 1:
+            return "Segunda-feira"
+        elif self.dia == 2:
+            return "Terça-feira"
+        elif self.dia == 3:
+            return "Quarta-feira"
+        elif self.dia == 4:
+            return "Quinta-feira"
+        elif self.dia == 5:
+            return "Sexta-feira"
+        elif self.dia == 6:
+            return "Sábado"
+        elif self.dia == 7:
+            return "Domingo"
+#>>>>>>> f8da74d132b64d8b691e5f89a99e0cc32b73c8b5
