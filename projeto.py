@@ -4,14 +4,13 @@
 #   IDEIAS
 # Variar o preço do café da manhã - Italo - Status: Feito
 # desconto de salário em % e talvez até demissão se faltar demais.
-# comprar moveis, criar uma lista de produtos - Italo - Status: Em progresso
+# comprar moveis, criar uma lista de produtos - Italo - Status: Feito mas não é chamado 2x
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
 # randomizar o que for possível.
-# <<<<<<< HEAD
-# Criação da opção 8, estoque. Italo - Status: Feito mas pode melhorar
+
+# Criação da opção 8, estoque. Italo - Status: Feito
 # Criar um segundo menu para as ideias depois do trabalho.
 
-# =======
 # Criação da opção 8, estoque. Feito mas pode melhorar
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
