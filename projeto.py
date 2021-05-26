@@ -242,10 +242,7 @@ if(__name__ == "__main__"):
 # =======
         elif(opcao == "10"):
             personagem.dormir()
-            if dia == 7:
-                1
-            else:
-                dia += 1
+            dia.avancaDia()
 # >>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
         elif(opcao == "0"):
             break
