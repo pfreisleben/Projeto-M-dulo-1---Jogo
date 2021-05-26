@@ -2,16 +2,23 @@
 # Sugestão: completar com classes filhas colocando pessoas saudáveis,
 # trabalhos menos remunerados, casas melhor equipadas et cetera
 #   IDEIAS
+# 
 # Variar o preço do café da manhã - Italo - Status: Feito
+# 
 # desconto de salário em % e talvez até demissão se faltar demais.
-# comprar moveis, criar uma lista de produtos - Italo - Status: Feito mas não é chamado 2x
+# 
+# comprar moveis, criar uma lista de produtos - Italo - Status: Feito
+# 
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
+# 
 # randomizar o que for possível.
-
+# 
 # Criação da opção 8, estoque. Italo - Status: Feito
+# 
 # Criar um segundo menu para as ideias depois do trabalho.
-
+# 
 # Criação da opção 8, estoque. Feito mas pode melhorar
+# 
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
 import random
@@ -41,7 +48,7 @@ class Personagem:
         self.sujo = True
         self.fome = True
         self.medicado = False
-        self.dinheiro = 10000
+        self.dinheiro = 0
         self.salario = 100
 
     def __str__(self):
@@ -57,26 +64,23 @@ class Casa(Personagem):
     def __init__(self):
         self.remedios = 1
         self.comida = 5
-    
-    def __str__(self):
-        return f"voc~e já tem, {self.moveis}"
+        
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
     def moveis(self):
         super().__init__()
-        # money = self.dinheiro
-        self.moveis = ["cama","fogão","geladeira"]
+        ja_tenho = ["cama","fogão","geladeira"]
         
-        estoque_de_moveis = {"sofa": 3000,
-                             "mesa": 2299,
-                             "video game": 1450,
-                             "tv": 11900}
+        estoque_de_moveis = {"sofa": 2400,
+                             "mesa": 1900,
+                             "video game": 1400,
+                             "tv": 1200}
         print(estoque_de_moveis)
         
         escolha_do_movel = input(
-            f"Você tem {self.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
+            f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
         while True:
             if escolha_do_movel == "sair":
                 print("Até logo")
@@ -86,10 +90,10 @@ class Casa(Personagem):
                     if escolha_do_movel in estoque_de_moveis:
                         
                         preco = estoque_de_moveis.get(escolha_do_movel)
-                        print('chegou aqui',preco)
+                        
                         if preco <= self.dinheiro:
                             personagem.dinheiro -= preco
-                            self.moveis.append(escolha_do_movel)
+                            ja_tenho.append(escolha_do_movel)
                             return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
                         else:
                             return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
