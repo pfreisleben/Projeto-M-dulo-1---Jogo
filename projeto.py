@@ -14,46 +14,9 @@
 # =======
 # Criação da opção 8, estoque. Feito mas pode melhorar
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
-# >>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
 
 import random
 from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
-
-
-# <<<<<<< HEAD
-class Relogio:
-    def __init__(self):
-        self.horas = 6
-        self.minutos = 0
-
-    def __str__(self):
-        return f"{self.horas:02d}:{self.minutos:02d}"
-
-    def avancaTempo(self, minutos):
-        self.minutos += minutos
-        while(self.minutos >= 60):
-            self.minutos -= 60
-            self.horas += 1
-
-    def atrasado(self):
-        return (self.horas > 7 or (self.horas == 7 and self.minutos > 0))
-
-
-class Personagem:
-    def __init__(self):
-        self.sujo = True
-        self.fome = True
-        self.medicado = False
-        self.dinheiro = 10000
-        self.salario = 100
-
-    def __str__(self):
-        return "Você está " + ("sujo" if self.sujo else "limpo")+", "+("com" if self.fome else "sem")+" fome e "+("" if self.medicado else "não ")+"tomou sua medicação. Você tem "+str(self.dinheiro)+" reais na sua conta."
-
-    def dormir(self):
-        self.sujo = True
-        self.fome = True
-        self.medicado = False
 
 
 class Casa(Personagem):
@@ -64,11 +27,6 @@ class Casa(Personagem):
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
-#<<<<<<< HEAD
-    
-#======
-#>>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
-#=======
     def moveis(self):
         super().__init__()
         money = self.dinheiro
@@ -105,9 +63,6 @@ class Casa(Personagem):
                         break
 
 
-# ======
-# >>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
-#>>>>>>> f8da74d132b64d8b691e5f89a99e0cc32b73c8b5
 if(__name__ == "__main__"):
     dia = Dia()
     relogio = Relogio()
