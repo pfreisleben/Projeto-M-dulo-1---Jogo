@@ -8,6 +8,7 @@
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
 # randomizar o que for possível.
 # Criação da opção 8, estoque. Feito mas pode melhorar
+# Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
 import random
 
@@ -90,7 +91,7 @@ if(__name__ == "__main__"):
                 print("Não há comida em casa.")
             relogio.avancaTempo(15)
         elif(opcao == "3"):
-            lanche = random.randint(5,15)
+            lanche = random.randint(5, 15)
             if(personagem.dinheiro >= lanche):
                 personagem.dinheiro -= lanche
                 cafe_da_manha = True
