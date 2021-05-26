@@ -11,11 +11,11 @@
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
 import random
-from classes import Relogio, Personagem, Casa  # Fiz a importação das classes
+from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
 
 
 if(__name__ == "__main__"):
-    dia = 1
+    dia = Dia()
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()
@@ -113,11 +113,7 @@ if(__name__ == "__main__"):
             personagem.dinheiro += recebido
             personagem.dormir()
             relogio = Relogio()
-            # Checa se é domingo, caso seja domingo, volta pro dia 1(segunda)
-            if dia == 7:
-                dia = 1
-            else:
-                dia += 1
+            dia.avancaDia()
 
         elif(opcao == "8"):  # Mostra estoque de comida e remédio
             print(casa.estoque())
