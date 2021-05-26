@@ -42,21 +42,15 @@ class Casa:
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
-    def moveis(self):
-        escolha_do_movel = input("Escolha o móvel que deseja: ")
-        estoque_de_moveis = {"Sofá de 3 lugares, retrátil 2.80m": 3000.0,
-                             "Mesa de jantar com 4 cadeiras": 2299.0,
-
-                             }
-#<<<<<<< HEAD
+    
     def moveis(self):
         super().__init__()
         money = self.dinheiro
         adquiridos = []
-        estoque_de_moveis = [("sofá",3000),
-        ("mesa",2299),
-        ("video game",1450),
-        ("tv",1900)]
+        estoque_de_moveis = {"sofá":3000,
+        "mesa":2299,
+        "video game":1450,
+        "tv":1900}
         print(estoque_de_moveis)
         print(type(estoque_de_moveis))
         escolha_do_movel = input(f"Você tem {money} \nEscolha o móvel que deseja ou sair:").lower()
@@ -81,6 +75,8 @@ class Casa:
                     else:
                         print("Produto inválidoa!")
                         break
+
+
 #=======
 
 
