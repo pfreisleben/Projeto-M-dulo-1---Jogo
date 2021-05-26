@@ -2,12 +2,12 @@
 # Sugestão: completar com classes filhas colocando pessoas saudáveis,
 # trabalhos menos remunerados, casas melhor equipadas et cetera
 #   IDEIAS
-# Variar o preço do café da manhã
+# Variar o preço do café da manhã - Italo - Feito
 # desconto de salário em % e talvez até demissão de faltar demais.
 # comprar moveis, criar uma lista de produtos
 # criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
 # randomizar o que for possível.
-# Criação da opção 8, estoque. ESTÁ PRONTA mas pode melhorar
+# Criação da opção 8, estoque. Feito mas pode melhorar
 
 # teste
 import random
@@ -91,12 +91,15 @@ if(__name__ == "__main__"):
                 print("Não há comida em casa.")
             relogio.avancaTempo(15)
         elif(opcao == "3"):
-            if(personagem.dinheiro >= 15):
-                personagem.dinheiro -= 15
+            lanche = random.randint(5,15)
+            if(personagem.dinheiro >= lanche):
+                personagem.dinheiro -= lanche
                 cafe_da_manha = True
+                print(
+                    f"O café da manhã custou {lanche} reais.")
             else:
                 print(
-                    "O café da manhã custa 15 reais, você não tem dinheiro suficiente.")
+                    f"O café da manhã custa {lanche} reais, você não tem dinheiro suficiente.")
             relogio.avancaTempo(5)
         elif(opcao == "4"):
             if(cafe_da_manha):
