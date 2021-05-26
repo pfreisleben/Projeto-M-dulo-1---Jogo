@@ -1,7 +1,13 @@
 # Proposta de projeto de ficção interativa para avaliação de OO
 # Sugestão: completar com classes filhas colocando pessoas saudáveis,
 # trabalhos menos remunerados, casas melhor equipadas et cetera
-
+#   IDEIAS 
+# Variar o preço do café da manhã
+# desconto de salário em % e talvez até demissão de faltar demais.
+# comprar moveis, criar uma lista de produtos
+# criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado
+# randomizar o que for possível.
+# import random
 
 class Relogio:
     def __init__(self):
@@ -42,7 +48,8 @@ class Casa:
     def __init__(self):
         self.remedios = 1
         self.comida = 5
-
+    def estoque (self):
+        return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
 if(__name__ == "__main__"):
     dia = 1
@@ -64,6 +71,7 @@ if(__name__ == "__main__"):
         print("5 - Tomar remédio")
         print("6 - Comprar remédio")
         print("7 - Ir trabalhar")
+        print("8 - Ver estoque de remédio e comida")
         print("0 - Sair do jogo")
         opcao = input("Escolha sua ação:")
         if(opcao == "1"):
