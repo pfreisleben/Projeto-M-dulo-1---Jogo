@@ -15,7 +15,6 @@
 # Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
 
 import random
-from classes import Relogio, Personagem, Casa, Dia  # Fiz a importação das classes
 
 
 class Relogio:
@@ -59,7 +58,7 @@ class Casa(Personagem):
         self.comida = 5
 
     def __str__(self):
-        return f"voc~e já tem, {self.moveis}"
+        return f"Você já tem, {self.moveis}"
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
