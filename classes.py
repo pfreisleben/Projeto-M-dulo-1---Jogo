@@ -49,14 +49,12 @@ class Casa():
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
     def moveis(self, personagem):
-        print(f'Você já tem: {self.ja_tem}')
-        print(f'Móveis disponiveis para compra: ')
-        print(self.estoque_de_moveis)
+        print(f'Você já tem: R${self.ja_tem}')
         while True:
             print(f'Estoque disponível para compra: ')
             print(self.estoque_de_moveis)
             escolha_do_movel = input(
-                f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair: ").lower()
+                f"Você tem R${personagem.dinheiro:.2f} \nEscolha o móvel que deseja ou digite sair: ").lower()
             if escolha_do_movel == "sair":
                 print("Até logo")
                 break
@@ -68,7 +66,7 @@ class Casa():
                         self.ja_tem.append(escolha_do_movel)
                         self.estoque_de_moveis.pop(escolha_do_movel)
                         print(
-                            f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
+                            f"{escolha_do_movel} foi adquirido por R${preco:.2f} e você ficou com R${personagem.dinheiro:.2f}")
                     else:
                         print(
                             f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
