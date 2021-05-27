@@ -52,10 +52,11 @@ class Personagem:
         self.medicado = False
 
 
-class Casa(Personagem):
+class Casa():
     def __init__(self):
         self.remedios = 1
         self.comida = 5
+        self.moveis = 0
 
     def __str__(self):
         return f"Você já tem, {self.moveis}"
