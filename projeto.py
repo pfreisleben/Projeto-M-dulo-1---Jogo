@@ -40,7 +40,7 @@ class Personagem:
         self.sujo = True
         self.fome = True
         self.medicado = False
-        self.dinheiro = 0
+        self.dinheiro = 10000
         self.salario = 100
 
     def __str__(self):
@@ -56,16 +56,14 @@ class Casa():
     def __init__(self):
         self.remedios = 1
         self.comida = 5
-
-    def __str__(self):
-        return f"Você já tem, {self.moveis}"
+        self.ja_tem = ["cama", "geladeira", "fogão"]
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
-    def moveis(self):
-        super().__init__()
-        self.moveis = ["cama", "fogão", "geladeira"]
+    def moveis(self, personagem):
+        # super().__init__()
+        print(f'Você já tem: {self.ja_tem}')
 
         estoque_de_moveis = {"sofa": 3000,
                              "mesa": 2299,
@@ -74,7 +72,7 @@ class Casa():
         print(estoque_de_moveis)
 
         escolha_do_movel = input(
-            f"Você tem {self.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
+            f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
         while True:
             if escolha_do_movel == "sair":
                 print("Até logo")
@@ -84,10 +82,9 @@ class Casa():
                     if escolha_do_movel in estoque_de_moveis:
 
                         preco = estoque_de_moveis.get(escolha_do_movel)
-                        print('chegou aqui', preco)
-                        if preco <= self.dinheiro:
+                        if preco <= personagem.dinheiro:
                             personagem.dinheiro -= preco
-                            self.moveis.append(escolha_do_movel)
+                            self.ja_tem.append(escolha_do_movel)
                             return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
                         else:
                             return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
@@ -238,7 +235,7 @@ if(__name__ == "__main__"):
             print(casa.estoque())
 
         elif(opcao == "9"):
-            casa.moveis()
+            casa.moveis(personagem)
 
         elif(opcao == "10"):
             personagem.dormir()
