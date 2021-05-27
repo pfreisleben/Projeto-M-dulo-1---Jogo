@@ -57,6 +57,10 @@ class Casa():
         self.remedios = 1
         self.comida = 5
         self.ja_tem = ["cama", "geladeira", "fogão"]
+        self.estoque_de_moveis = {"sofa": 3000,
+                                  "mesa": 2299,
+                                  "video game": 1450,
+                                  "tv": 11900}
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
@@ -65,11 +69,7 @@ class Casa():
         # super().__init__()
         print(f'Você já tem: {self.ja_tem}')
 
-        estoque_de_moveis = {"sofa": 3000,
-                             "mesa": 2299,
-                             "video game": 1450,
-                             "tv": 11900}
-        print(estoque_de_moveis)
+        print(self.estoque_de_moveis)
 
         escolha_do_movel = input(
             f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
@@ -78,14 +78,16 @@ class Casa():
                 print("Até logo")
                 break
             else:
-                for item in estoque_de_moveis:
-                    if escolha_do_movel in estoque_de_moveis:
+                for item in self.estoque_de_moveis:
+                    if escolha_do_movel in self.estoque_de_moveis:
 
-                        preco = estoque_de_moveis.get(escolha_do_movel)
+                        preco = self.estoque_de_moveis.get(escolha_do_movel)
                         if preco <= personagem.dinheiro:
                             personagem.dinheiro -= preco
                             self.ja_tem.append(escolha_do_movel)
+                            self.estoque_de_moveis.pop(escolha_do_movel)
                             return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
+
                         else:
                             return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
 
