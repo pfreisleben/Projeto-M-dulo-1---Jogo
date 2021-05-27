@@ -43,7 +43,7 @@ if(__name__ == "__main__"):
         print("7 - Ir trabalhar")
         print("8 - Ver estoque de remédio e comida")
         print("9 - Comprar móveis")
-        print("10 - Dormir!")
+        print("10 - Dormir Direto")
         print("0 - Sair do jogo")
         opcao = input("Escolha sua ação:")
         if(opcao == "1"):  # Toma Banho, escova dentes
@@ -104,7 +104,6 @@ if(__name__ == "__main__"):
                 print(f'Você retornou a sua casa. ')
                 personagem.desempregado = True
                 continua = False
-                relogio.avancaTempo(120)
                 print(personagem)
                 continue
             elif(not personagem.medicado):
@@ -135,7 +134,7 @@ if(__name__ == "__main__"):
         elif(opcao == "8"):  # Mostra estoque de comida e remédio
             print(casa.estoque())
 
-        elif(opcao == "9"):
+        elif(opcao == "9"):  # Inicia compra de moveis
             casa.moveis(personagem)
 
         elif(opcao == "10"):

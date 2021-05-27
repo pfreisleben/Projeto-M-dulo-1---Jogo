@@ -54,25 +54,22 @@ class Casa():
         print(f'Móveis disponiveis para compra: ')
         print(self.estoque_de_moveis)
 
-        escolha_do_movel = input(
-            f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair: ").lower()
         while True:
+            escolha_do_movel = input(
+                f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair: ").lower()
             if escolha_do_movel == "sair":
                 print("Até logo")
                 break
             else:
                 if escolha_do_movel in self.estoque_de_moveis:
-
                     preco = self.estoque_de_moveis.get(escolha_do_movel)
                     if preco <= personagem.dinheiro:
                         personagem.dinheiro -= preco
                         self.ja_tem.append(escolha_do_movel)
                         self.estoque_de_moveis.pop(escolha_do_movel)
                         return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
-
                     else:
                         return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
-
                 else:
                     return print("Produto inválido!")
 
