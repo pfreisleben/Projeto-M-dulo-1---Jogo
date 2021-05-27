@@ -65,11 +65,13 @@ class Casa():
                         personagem.dinheiro -= preco
                         self.ja_tem.append(escolha_do_movel)
                         self.estoque_de_moveis.pop(escolha_do_movel)
-                        return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
+                        print(
+                            f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
                     else:
-                        return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
+                        print(
+                            f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
                 else:
-                    return print("Produto inválido!")
+                    print("Produto inválido!")
 
 
 class Dia:
