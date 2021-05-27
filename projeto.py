@@ -240,6 +240,7 @@ if(__name__ == "__main__"):
 
         elif(opcao == "10"):
             personagem.dormir()
+            relogio = Relogio()
             dia.avancaDia()
         elif(opcao == "0"):
             break
