@@ -70,7 +70,6 @@ class Casa():
                         return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
                 else:
                     return print("Produto inválido!")
-                    continue
 
 
 class Dia:
