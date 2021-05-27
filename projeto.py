@@ -65,7 +65,7 @@ class Casa():
 
     def moveis(self):
         super().__init__()
-       #  self.moveis = ["cama", "fogão", "geladeira"]
+        self.moveis = ["cama", "fogão", "geladeira"]
 
         estoque_de_moveis = {"sofa": 3000,
                              "mesa": 2299,
