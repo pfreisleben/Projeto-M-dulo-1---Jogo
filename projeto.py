@@ -1,7 +1,7 @@
 # Proposta de projeto de ficção interativa para avaliação de OO
 # Sugestão: completar com classes filhas colocando pessoas saudáveis,
 # trabalhos menos remunerados, casas melhor equipadas et cetera
-#   IDEIAS
+# IDEIAS
 # Variar o preço do café da manhã - Italo - Status: Feito
 # desconto de salário em % e talvez até demissão se faltar demais.
 # comprar moveis, criar uma lista de produtos - Italo - Status: Feito mas não é chamado 2x

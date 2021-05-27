@@ -49,7 +49,6 @@ class Casa():
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
     def moveis(self, personagem):
-        # super().__init__()
         print(f'Você já tem: {self.ja_tem}')
         print(f'Móveis disponiveis para compra: ')
         print(self.estoque_de_moveis)
