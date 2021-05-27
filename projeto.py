@@ -68,11 +68,11 @@ class Casa():
     def moveis(self, personagem):
         # super().__init__()
         print(f'Você já tem: {self.ja_tem}')
-
+        print(f'Móveis disponiveis para compra: ')
         print(self.estoque_de_moveis)
 
         escolha_do_movel = input(
-            f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
+            f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair: ").lower()
         while True:
             if escolha_do_movel == "sair":
                 print("Até logo")
