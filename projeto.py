@@ -247,7 +247,6 @@ if(__name__ == "__main__"):
                 1
             else:
                 dia += 1
-# >>>>>>> 08113fdc30b0a12e5161a445b2eabc8008cc261f
         elif(opcao == "0"):
             break
         else:
