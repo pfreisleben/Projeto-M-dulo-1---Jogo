@@ -78,21 +78,20 @@ class Casa():
                 print("Até logo")
                 break
             else:
-                for item in self.estoque_de_moveis:
-                    if escolha_do_movel in self.estoque_de_moveis:
+                if escolha_do_movel in self.estoque_de_moveis:
 
-                        preco = self.estoque_de_moveis.get(escolha_do_movel)
-                        if preco <= personagem.dinheiro:
-                            personagem.dinheiro -= preco
-                            self.ja_tem.append(escolha_do_movel)
-                            self.estoque_de_moveis.pop(escolha_do_movel)
-                            return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
-
-                        else:
-                            return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
+                    preco = self.estoque_de_moveis.get(escolha_do_movel)
+                    if preco <= personagem.dinheiro:
+                        personagem.dinheiro -= preco
+                        self.ja_tem.append(escolha_do_movel)
+                        self.estoque_de_moveis.pop(escolha_do_movel)
+                        return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
 
                     else:
-                        return print("Produto inválido!")
+                        return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
+
+                else:
+                    return print("Produto inválido!")
 
 
 class Dia:
