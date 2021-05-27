@@ -65,9 +65,9 @@ class Casa():
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
     def moveis(self):
-        super().__init__()
+        # super().__init__()
         # money = self.dinheiro
-        self.moveis = ["cama", "fogão", "geladeira"]
+       #  self.moveis = ["cama", "fogão", "geladeira"]
 
         estoque_de_moveis = {"sofa": 3000,
                              "mesa": 2299,
