@@ -49,7 +49,7 @@ class Casa():
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
     def moveis(self, personagem):
-        print(f'Você já tem: R${self.ja_tem}')
+        print(f'Móveis que você já tem: {self.ja_tem}')
         while True:
             print(f'Estoque disponível para compra: ')
             print(self.estoque_de_moveis)
