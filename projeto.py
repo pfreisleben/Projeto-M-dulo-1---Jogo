@@ -56,7 +56,6 @@ class Casa():
     def __init__(self):
         self.remedios = 1
         self.comida = 5
-        self.moveis = 0
 
     def __str__(self):
         return f"Você já tem, {self.moveis}"
@@ -65,8 +64,7 @@ class Casa():
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
     def moveis(self):
-        # super().__init__()
-        # money = self.dinheiro
+        super().__init__()
        #  self.moveis = ["cama", "fogão", "geladeira"]
 
         estoque_de_moveis = {"sofa": 3000,
