@@ -21,15 +21,16 @@ from classes import Personagem, Dia, Casa, Relogio
 
 
 if(__name__ == "__main__"):
+    continua = True
     dia = Dia()
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()
     cafe_da_manha = False
-    while True:
+    while continua:
         print("---")
         print("São "+str(relogio)+" do dia "+str(dia) +
-              (". Você está desempregado" if personagem.desempregado else ". Você precisa sair pra trabalhar até as 07h00"))
+              ". Você precisa sair pra trabalhar até as 07h00")
         print(personagem)
         print("")
         print("Ações:")
@@ -101,7 +102,10 @@ if(__name__ == "__main__"):
                 print(
                     "Como você faltou ao trabalho mais de 5 vezes, o seu chefe demitiu você. Por justa causa... ")
                 print(f'Você retornou a sua casa. ')
+                personagem.desempregado = True
+                continua = False
                 relogio.avancaTempo(120)
+                print(personagem)
                 continue
             elif(not personagem.medicado):
                 print(
@@ -144,3 +148,4 @@ if(__name__ == "__main__"):
         else:
             print("Opção inválida!")
             relogio.avancaTempo(5)
+print(f'Game over, você foi demitido!')
