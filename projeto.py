@@ -40,7 +40,7 @@ class Personagem:
         self.sujo = True
         self.fome = True
         self.medicado = False
-        self.dinheiro = 0
+        self.dinheiro = 10000
         self.salario = 100
 
     def __str__(self):
@@ -56,11 +56,20 @@ class Casa(Personagem):
     def __init__(self):
         self.remedios = 1
         self.comida = 5
+<<<<<<< HEAD
         ja_tenho = ["cama", "fogão", "geladeira"]
+=======
+        self.ja_tem = ["cama", "geladeira", "fogão"]
+        self.estoque_de_moveis = {"sofa": 3000,
+                                  "mesa": 2299,
+                                  "video game": 1450,
+                                  "tv": 11900}
+>>>>>>> c54819a48bd64264d90b372a07dc61b2e1f36145
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
+<<<<<<< HEAD
     def moveis(self):
         super().__init__()
         # money = self.dinheiro
@@ -74,11 +83,22 @@ class Casa(Personagem):
 
         escolha_do_movel = input(
             f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair:").lower()
+=======
+    def moveis(self, personagem):
+        # super().__init__()
+        print(f'Você já tem: {self.ja_tem}')
+        print(f'Móveis disponiveis para compra: ')
+        print(self.estoque_de_moveis)
+
+        escolha_do_movel = input(
+            f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair: ").lower()
+>>>>>>> c54819a48bd64264d90b372a07dc61b2e1f36145
         while True:
             if escolha_do_movel == "sair":
                 print("Até logo")
                 break
             else:
+<<<<<<< HEAD
                 for item in estoque_de_moveis:
                     if escolha_do_movel in estoque_de_moveis:
 
@@ -90,9 +110,22 @@ class Casa(Personagem):
                             return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
                         else:
                             return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
+=======
+                if escolha_do_movel in self.estoque_de_moveis:
+
+                    preco = self.estoque_de_moveis.get(escolha_do_movel)
+                    if preco <= personagem.dinheiro:
+                        personagem.dinheiro -= preco
+                        self.ja_tem.append(escolha_do_movel)
+                        self.estoque_de_moveis.pop(escolha_do_movel)
+                        return print(f"{escolha_do_movel} foi adquirido por {preco} e você ficou com {personagem.dinheiro}")
+>>>>>>> c54819a48bd64264d90b372a07dc61b2e1f36145
 
                     else:
-                        return print("Produto inválido!")
+                        return print(f"Você não tem dinheiro para comprar esse produto, falta {preco - personagem.dinheiro}")
+
+                else:
+                    return print("Produto inválido!")
 
 
 class Dia:
@@ -237,7 +270,7 @@ if(__name__ == "__main__"):
             print(casa.estoque())
 
         elif(opcao == "9"):
-            casa.moveis()
+            casa.moveis(personagem)
 
         elif(opcao == "10"):
             personagem.dormir()
