@@ -53,7 +53,6 @@ class Casa():
         print(f'Você já tem: {self.ja_tem}')
         print(f'Móveis disponiveis para compra: ')
         print(self.estoque_de_moveis)
-
         while True:
             escolha_do_movel = input(
                 f"Você tem {personagem.dinheiro} \nEscolha o móvel que deseja ou sair: ").lower()
