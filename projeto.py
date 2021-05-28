@@ -31,6 +31,7 @@ if(__name__ == "__main__"):
         pass
     else:
         while continua:
+            print(personagem.faltasTrabalho)
             print("---")
             print("São "+str(relogio)+" do dia "+str(dia) +
                   (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
@@ -108,10 +109,8 @@ if(__name__ == "__main__"):
                     print(
                         "Como você faltou ao trabalho mais de 5 vezes, o seu chefe demitiu você. Por justa causa... ")
                     print(f'Você retornou a sua casa. ')
-                    personagem.desempregado = True
-                    continua = False
-                    print(personagem)
-                    continue
+                    print(f'Como você foi demitido, você perdeu o jogo, Game Over!')
+                    break
                 elif(not personagem.medicado):
                     print(
                         "Como você não tomou seu remédio, você ficou doente no caminho e não chegou no trabalho")
@@ -149,12 +148,13 @@ if(__name__ == "__main__"):
 
             elif(opcao == "10"):
                 personagem.dormir()
-                personagem.faltasTrabalho += 1
                 relogio = Relogio()
                 dia.avancaDia()
+                if not dia.finalDeSemana:
+                    personagem.faltasTrabalho += 1
+
             elif(opcao == "0"):
                 break
             else:
                 print("Opção inválida!")
                 relogio.avancaTempo(5)
-        print(f'Game over, você foi demitido!')
