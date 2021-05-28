@@ -26,7 +26,6 @@ if(__name__ == "__main__"):
     personagem = Personagem()
     casa = Casa()
     cafe_da_manha = False
-    print(dia.finalDeSemana)
     if dia.finalDeSemana:
         print("teste")
     else:
