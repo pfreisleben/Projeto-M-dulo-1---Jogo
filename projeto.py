@@ -143,6 +143,9 @@ if(__name__ == "__main__"):
             elif(opcao == "9"):  # Inicia compra de moveis
                 casa.moveis(personagem)
                 relogio.avancaTempo(10)
+                if len(casa.estoque_de_moveis) == 0:
+                    print(f'Você comprou todos os móveis e ganhou o jogo!')
+                    break
 
             elif(opcao == "10"):
                 personagem.dormir()

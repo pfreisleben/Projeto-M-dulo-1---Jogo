@@ -50,7 +50,7 @@ class Casa():
 
     def moveis(self, personagem):
         print(f'Móveis que você já tem: {self.ja_tem}')
-        while True:
+        while True and len(self.estoque_de_moveis) > 0:
             print(f'Estoque disponível para compra: ')
             print(self.estoque_de_moveis)
             escolha_do_movel = input(
@@ -65,10 +65,6 @@ class Casa():
                         personagem.dinheiro -= preco
                         self.ja_tem.append(escolha_do_movel)
                         self.estoque_de_moveis.pop(escolha_do_movel)
-                        if len(escolha_do_movel) == 0:
-                            print(
-                                f'Você comprou todos os móveis, você ganhou o jogo!')
-                            break
                         print(
                             f"{escolha_do_movel} foi adquirido por R${preco:.2f} e você ficou com R${personagem.dinheiro:.2f}")
                     else:
