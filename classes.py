@@ -50,7 +50,7 @@ class Casa():
 
     def moveis(self, personagem):
         print(f'Móveis que você já tem: {self.ja_tem}')
-        while True and len(self.estoque_de_moveis) > 0:
+        while len(self.estoque_de_moveis) > 0:
             print(f'Estoque disponível para compra: ')
             print(self.estoque_de_moveis)
             escolha_do_movel = input(
