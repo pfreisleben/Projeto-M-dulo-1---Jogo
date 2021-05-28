@@ -21,7 +21,7 @@ class Personagem:
         self.sujo = True
         self.fome = True
         self.medicado = False
-        self.dinheiro = 10000
+        self.dinheiro = 1000
         self.salario = 100
         self.faltasTrabalho = 0
         self.desempregado = False
