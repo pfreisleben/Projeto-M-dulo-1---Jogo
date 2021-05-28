@@ -27,7 +27,7 @@ if(__name__ == "__main__"):
     casa = Casa()
     cafe_da_manha = False
     if dia.finalDeSemana:
-        pass
+        print("teste")
     else:
         while True:
             print("---")
@@ -90,9 +90,11 @@ if(__name__ == "__main__"):
                     casa.remedios += 10
                     personagem.dinheiro -= 20
                     relogio.avancaTempo(10)
-                    print(f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
+                    print(
+                        f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
                 else:
-                    print(f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.dinheiro}.")
+                    print(
+                        f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.dinheiro}.")
                     relogio.avancaTempo(5)
             elif(opcao == "7"):  # Vai trabalhar
                 if dia.finalDeSemana:
