@@ -26,8 +26,23 @@ if(__name__ == "__main__"):
     cafe_da_manha = False
     while True:
         if dia.finalDeSemana:
-            print("teste")
-            pass
+            print("Aeee, final de semana chegou! ")
+            print("São "+str(relogio)+" do dia "+str(dia) +
+                  (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
+            print(personagem)
+            print("")
+            print("Ações:")
+            print("1 - Tomar banho e escovar os dentes")
+            print("2 - Fazer café da manhã")
+            print("3 - Pedir café da manhã")
+            print("4 - Tomar café da manhã")
+            print("5 - Tomar remédio")
+            print("6 - Comprar remédio")
+            print("7 - Ir pro barzinho")
+            print("8 - Ir para restaurante")
+            print("9 - Voltar para casa")
+            print("10 - Dormir")
+            print("0 - Sair do jogo")
         else:
             print("---")
             print("São "+str(relogio)+" do dia "+str(dia) +
