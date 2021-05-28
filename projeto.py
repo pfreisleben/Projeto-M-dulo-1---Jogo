@@ -40,7 +40,8 @@ if(__name__ == "__main__"):
         print("4 - Tomar café da manhã")
         print("5 - Tomar remédio")
         print("6 - Comprar remédio")
-        print("7 - Ir trabalhar")
+        if not dia.finalDeSemana:
+            print("7 - Ir trabalhar")
         print("8 - Ver estoque de remédio e comida")
         print("9 - Comprar móveis")
         print("10 - Dormir Direto")
