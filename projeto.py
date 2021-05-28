@@ -1,18 +1,16 @@
-# Proposta de projeto de ficção interativa para avaliação de OO
-# Sugestão: completar com classes filhas colocando pessoas saudáveis,
-# trabalhos menos remunerados, casas melhor equipadas et cetera
-# IDEIAS
+# Ideias implantadas:
+# Opção 8 - Chequar estoque de comida e remédio
+# Opção 9 - Compra de móveis, validando estoque disponivel, dinheiro, e caso compre tudo, ganha o jogo.
 # Variar o preço do café da manhã - Italo - Status: Feito
-# desconto de salário em % e talvez até demissão se faltar demais.
-# comprar moveis, criar uma lista de produtos - Italo - Status: Feito
-# criar a opção de FDS, dia 6 e 7. -FEITO
-# randomizar o que for possível.
+# Criação da classe "Dia", responsavél por armazenar a data, e valida se é final de semana ou não.
+# Caso vá dormir sem trabalhar, adiciona uma falta ao trabalho(caso não seja final de semana)
+# Caso seja final de semana, não pode trabalhar, e a opção desaparece do menu.
+# Caso falte mais de 5 vezes no trabalho, é demitido e perde o Jogo.
+# Informe o nome do dia da semana: Segunda, Terça....
+# Opção 10 - O personagem pode dormir direto, avançando um dia.
 
-# Criação da opção 8, estoque. Italo - Status: Feito
-# Criar um segundo menu para as ideias depois do trabalho.
-
-# Criação da opção 8, estoque. Feito mas pode melhorar
-# Criar opção de Dormir, para pular o dia e resetar a condição da pessoa
+# As ideias implantadas usaram os conceitos de Módulo, Classe, Variavel, Loops, Metodos, Operadores Lógicos e
+# condicionais.
 
 import random
 
