@@ -31,7 +31,6 @@ if(__name__ == "__main__"):
         pass
     else:
         while continua:
-            print(personagem.faltasTrabalho)
             print("---")
             print("São "+str(relogio)+" do dia "+str(dia) +
                   (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
