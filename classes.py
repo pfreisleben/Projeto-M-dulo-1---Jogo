@@ -65,6 +65,10 @@ class Casa():
                         personagem.dinheiro -= preco
                         self.ja_tem.append(escolha_do_movel)
                         self.estoque_de_moveis.pop(escolha_do_movel)
+                        if len(escolha_do_movel) == 0:
+                            print(
+                                f'Você comprou todos os móveis, você ganhou o jogo!')
+                            break
                         print(
                             f"{escolha_do_movel} foi adquirido por R${preco:.2f} e você ficou com R${personagem.dinheiro:.2f}")
                     else:

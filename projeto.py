@@ -46,7 +46,7 @@ if(__name__ == "__main__"):
             print("7 - Ir trabalhar")
             print("8 - Ver estoque de remédio e comida")
             print("9 - Comprar móveis")
-            print("10 - Dormir Direto")
+            print("10 - Dormir")
             print("0 - Sair do jogo")
             opcao = input("Escolha sua ação:")
             if(opcao == "1"):  # Toma Banho, escova dentes
