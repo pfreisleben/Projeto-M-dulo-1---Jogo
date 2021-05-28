@@ -21,16 +21,16 @@ from classes import Personagem, Dia, Casa, Relogio
 
 
 if(__name__ == "__main__"):
-    continua = True
     dia = Dia()
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()
     cafe_da_manha = False
+    print(dia.finalDeSemana)
     if dia.finalDeSemana:
-        pass
+        print("teste")
     else:
-        while continua:
+        while True:
             print("---")
             print("São "+str(relogio)+" do dia "+str(dia) +
                   (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
@@ -91,9 +91,11 @@ if(__name__ == "__main__"):
                     casa.remedios += 10
                     personagem.dinheiro -= 20
                     relogio.avancaTempo(10)
+                    print(
+                        f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
                 else:
                     print(
-                        "A cartela com 10 remédios custa 20 reais, você não tem dinheiro suficiente.")
+                        f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.dinheiro}.")
                     relogio.avancaTempo(5)
             elif(opcao == "7"):  # Vai trabalhar
                 if dia.finalDeSemana:
