@@ -23,7 +23,7 @@ class Personagem:
         self.medicado = False
         self.dinheiro = 10000
         self.salario = 100
-        self.faltasTrabalho = 7
+        self.faltasTrabalho = 0
         self.desempregado = False
 
     def __str__(self):

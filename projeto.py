@@ -4,8 +4,8 @@
 # IDEIAS
 # Variar o preço do café da manhã - Italo - Status: Feito
 # desconto de salário em % e talvez até demissão se faltar demais.
-# comprar moveis, criar uma lista de produtos - Italo - Status: Feito mas não é chamado 2x
-# criar a opção de FDS, dia 6 e 7. Talvez um elemento random dentro dos dias, sorteando um feriado - PEDRO
+# comprar moveis, criar uma lista de produtos - Italo - Status: Feito
+# criar a opção de FDS, dia 6 e 7. -FEITO
 # randomizar o que for possível.
 
 # Criação da opção 8, estoque. Italo - Status: Feito
@@ -28,10 +28,10 @@ if(__name__ == "__main__"):
     casa = Casa()
     cafe_da_manha = False
     while continua:
-        print(dia.finalDeSemana)
         print("---")
         print("São "+str(relogio)+" do dia "+str(dia) +
               (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
+        print(personagem)
         print("")
         print("Ações:")
         print("1 - Tomar banho e escovar os dentes")
@@ -94,6 +94,9 @@ if(__name__ == "__main__"):
                     "A cartela com 10 remédios custa 20 reais, você não tem dinheiro suficiente.")
                 relogio.avancaTempo(5)
         elif(opcao == "7"):  # Vai trabalhar
+            if dia.finalDeSemana:
+                print(f'É final de semana, você não pode trabalhar!')
+                continue
             print("-=-=-")
             print("Você foi trabalhar.")
             print(personagem)
@@ -137,6 +140,7 @@ if(__name__ == "__main__"):
 
         elif(opcao == "9"):  # Inicia compra de moveis
             casa.moveis(personagem)
+            relogio.avancaTempo(10)
 
         elif(opcao == "10"):
             personagem.dormir()
