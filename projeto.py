@@ -28,10 +28,10 @@ if(__name__ == "__main__"):
     casa = Casa()
     cafe_da_manha = False
     while continua:
+        print(dia.finalDeSemana)
         print("---")
         print("São "+str(relogio)+" do dia "+str(dia) +
-              ". Você precisa sair pra trabalhar até as 07h00")
-        print(personagem)
+              (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
         print("")
         print("Ações:")
         print("1 - Tomar banho e escovar os dentes")

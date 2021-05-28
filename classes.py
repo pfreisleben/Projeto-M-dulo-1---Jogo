@@ -84,14 +84,14 @@ class Dia:
 
     # Se for sáb ou dom, FDS = True.
     def avancaDia(self):
-        if 6 <= self.dia <= 7:
-            self.finalDeSemana = True
-        else:
-            self.finalDeSemana = False
         if self.dia == 7:
             self.dia = 1
         else:
             self.dia += 1
+        if self.dia == 6 or self.dia == 7:
+            self.finalDeSemana = True
+        else:
+            self.finalDeSemana = False
 
     def semana(self):
         if self.dia == 1:
