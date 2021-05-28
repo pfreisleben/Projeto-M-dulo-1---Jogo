@@ -40,10 +40,10 @@ class Casa():
         self.remedios = 1
         self.comida = 5
         self.ja_tem = ["cama", "geladeira", "fogão"]
-        self.estoque_de_moveis = {"sofa": 3000,
-                                  "mesa": 2299,
-                                  "video game": 1450,
-                                  "tv": 11900}
+        self.estoque_de_moveis = {"sofa": 300,
+                                  "mesa": 230,
+                                  "video game": 150,
+                                  "tv": 170}
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
