@@ -21,7 +21,6 @@ from classes import Personagem, Dia, Casa, Relogio
 
 
 if(__name__ == "__main__"):
-    continua = True
     dia = Dia()
     relogio = Relogio()
     personagem = Personagem()
@@ -30,7 +29,7 @@ if(__name__ == "__main__"):
     if dia.finalDeSemana:
         pass
     else:
-        while continua:
+        while True:
             print("---")
             print("São "+str(relogio)+" do dia "+str(dia) +
                   (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
