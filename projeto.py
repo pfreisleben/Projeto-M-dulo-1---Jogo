@@ -40,9 +40,118 @@ if(__name__ == "__main__"):
             print("6 - Comprar remédio")
             print("7 - Ir pro barzinho")
             print("8 - Ir para restaurante")
-            print("9 - Voltar para casa")
+            print("9 - Futebol")
             print("10 - Dormir")
+            print("11 - Trabalho Extra")
             print("0 - Sair do jogo")
+            if(opcao == "1"):  # Toma Banho, escova dentes
+                personagem.sujo = False
+                relogio.avancaTempo(20)
+            elif(opcao == "2"):  # Faz café da manhã
+                if(casa.comida > 0):
+                    casa.comida -= 1
+                    cafe_da_manha = True
+                else:
+                    print("Não há comida em casa.")
+                relogio.avancaTempo(15)
+            elif(opcao == "3"):  # Pede café da manhã
+                lanche = random.randint(5, 15)
+                if(personagem.dinheiro >= lanche):
+                    casa.comida += 1
+                    personagem.dinheiro -= lanche
+                    cafe_da_manha = True
+                    print(
+                        f"O café da manhã custou {lanche} reais.")
+                else:
+                    print(
+                        f"O café da manhã custa {lanche} reais, você não tem dinheiro suficiente.")
+                relogio.avancaTempo(5)
+            elif(opcao == "4"):  # Toma café da manhã
+                if(cafe_da_manha):
+                    personagem.fome = False
+                    cafe_da_manha = False
+                    relogio.avancaTempo(15)
+                else:
+                    print("Não tem café da manhã na sua casa.")
+                    relogio.avancaTempo(5)
+            elif(opcao == "5"):  # Toma remédio
+                if(casa.remedios > 0):
+                    casa.remedios -= 1
+                    personagem.medicado = True
+                else:
+                    print("Não tem remédio na sua casa")
+                relogio.avancaTempo(5)
+            elif(opcao == "6"):  # Compra remédio
+                if(personagem.dinheiro >= 20):
+                    casa.remedios += 10
+                    personagem.dinheiro -= 20
+                    relogio.avancaTempo(10)
+                    print(
+                        f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
+                else:
+                    print(
+                        f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.dinheiro}.")
+                    relogio.avancaTempo(5)
+            elif(opcao == "7"):  # ir pro barzinho
+                if dia.finalDeSemana:
+                    if personagem.dinheiro >= 120:
+                        barzinho = random.randint(30,120)
+                        print(f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
+                        personagem.dinheiro -= barzinho
+                    else:
+                        print("Você não tem grana para ir pro bar. Ficou em casa tomando uma de boa")                        
+                personagem.dormir()
+                relogio = Relogio()
+                dia.avancaDia()
+
+            elif(opcao == "8"):  # Ir para restaurante
+                if dia.finalDeSemana:
+                    restaurante = random.randint(30,75)
+                    if personagem.dinheiro >= 75:                        
+                        print(f'É final de semana e você foi pro restaurante!Você gastou {restaurante}')
+                        personagem.dinheiro -= restaurante
+                    else:
+                        print("Você não tem grana para ir pro bar. Ficou em casa comendo miojo")                        
+                personagem.dormir()
+                relogio = Relogio()
+                dia.avancaDia()
+
+            elif(opcao == "9"):  # Futebol
+                if dia.finalDeSemana:
+                    futebol = random.randint(10,35)
+                    if personagem.dinheiro < 35:
+                        print(f'É final de semana e você foi pro futebol!Você gastou {futebol}')
+                        personagem.dinheiro -= futebol
+                    elif personagem.dinheiro >= 65:
+                        print(f'É final de semana e você foi pro futebol e depois para uma resenha das boas \n!Você gastou {futebol+30}')
+                        personagem.dinheiro -= futebol+30
+                    else:
+                        print("Você não tem grana para ir pro futebol. Ficou em casa jogando video")
+
+                personagem.dormir()
+                relogio = Relogio()
+                dia.avancaDia()
+            elif(opcao == "10"):
+                personagem.dormir()
+                relogio = Relogio()
+                dia.avancaDia()
+                if not dia.finalDeSemana:
+                    personagem.faltasTrabalho += 1
+            
+            elif(opcao == "11"): #Trabalho extra
+                extra = random.randint(150,200)
+                print("Você trabalhou o dia todo e ganhou R$ {extra}.")
+                personagem.dinheiro += extra
+                
+                personagem.dormir()
+                relogio = Relogio()
+                dia.avancaDia()
+
+            elif(opcao == "0"):
+                break
+            else:
+                print("Opção inválida!")
+                relogio.avancaTempo(5)
         else:
             print("---")
             print("São "+str(relogio)+" do dia "+str(dia) +
