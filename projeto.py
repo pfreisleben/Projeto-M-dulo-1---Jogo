@@ -95,7 +95,7 @@ if(__name__ == "__main__"):
             elif(opcao == "7"):  # ir pro barzinho
                 if dia.finalDeSemana:
                     if personagem.dinheiro >= 120:
-                        barzinho = random.randint(30,120)
+                        barzinho = random.randint(30,120,3)
                         print(f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
                         personagem.dinheiro -= barzinho
                     else:
@@ -106,8 +106,8 @@ if(__name__ == "__main__"):
 
             elif(opcao == "8"):  # Ir para restaurante
                 if dia.finalDeSemana:
-                    restaurante = random.randint(30,75)
-                    if personagem.dinheiro >= 75:                        
+                    restaurante = random.randint(30,80,10)
+                    if personagem.dinheiro >= 80:                        
                         print(f'É final de semana e você foi pro restaurante!Você gastou {restaurante}')
                         personagem.dinheiro -= restaurante
                     else:
@@ -118,7 +118,7 @@ if(__name__ == "__main__"):
 
             elif(opcao == "9"):  # Futebol
                 if dia.finalDeSemana:
-                    futebol = random.randint(10,35)
+                    futebol = random.randint(10,35,5)
                     if personagem.dinheiro < 35:
                         print(f'É final de semana e você foi pro futebol!Você gastou {futebol}')
                         personagem.dinheiro -= futebol
