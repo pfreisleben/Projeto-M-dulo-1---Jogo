@@ -26,7 +26,7 @@ if(__name__ == "__main__"):
     cafe_da_manha = False
     while True:
         if dia.finalDeSemana:
-            print("Aeee, final de semana chegou! ")
+            print("É final de semana! :)")
             print("São "+str(relogio)+" do dia "+str(dia) +
                   (". Você precisa sair para trabalhar até 07h00" if not dia.finalDeSemana else "."))
             print(personagem)
