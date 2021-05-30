@@ -144,7 +144,7 @@ if(__name__ == "__main__"):
 
             elif(opcao == "11"):  # Trabalho extra
                 extra = random.randint(150, 200)
-                print("Você trabalhou o dia todo e ganhou R$ {extra}.")
+                print(f'Você trabalhou o dia todo e ganhou R$ {extra}.')
                 personagem.dinheiro += extra
 
                 personagem.dormir()
