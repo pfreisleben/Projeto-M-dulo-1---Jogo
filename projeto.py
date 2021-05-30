@@ -44,6 +44,7 @@ if(__name__ == "__main__"):
             print("10 - Dormir")
             print("11 - Trabalho Extra")
             print("0 - Sair do jogo")
+            opcao = input(f'Digite sua opção: ')
             if(opcao == "1"):  # Toma Banho, escova dentes
                 personagem.sujo = False
                 relogio.avancaTempo(20)
