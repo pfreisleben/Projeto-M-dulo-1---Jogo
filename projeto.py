@@ -224,9 +224,6 @@ if(__name__ == "__main__"):
                         f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.dinheiro}.")
                     relogio.avancaTempo(5)
             elif(opcao == "7"):  # Vai trabalhar
-                if dia.finalDeSemana:
-                    print(f'É final de semana, você não pode trabalhar!')
-                    continue
                 print("-=-=-")
                 print("Você foi trabalhar.")
                 print(personagem)
