@@ -54,7 +54,7 @@ if(__name__ == "__main__"):
             print("0 - Sair do jogo")
             opcao = input(f'Digite sua opção: ')
             if(opcao == "1"):  # Toma Banho, escova dentes
-                personagem.sujo = False
+                personagem.setSujo(False)
                 relogio.avancaTempo(20)
             elif(opcao == "2"):  # Faz café da manhã
                 if(casa.comida > 0):
@@ -184,7 +184,7 @@ if(__name__ == "__main__"):
             print("0 - Sair do jogo")
             opcao = input("Escolha sua ação:")
             if(opcao == "1"):  # Toma Banho, escova dentes
-                personagem.sujo = False
+                personagem.setSujo(False)
                 relogio.avancaTempo(20)
             elif(opcao == "2"):  # Faz café da manhã
                 if(casa.comida > 0):
@@ -248,7 +248,7 @@ if(__name__ == "__main__"):
                     print(
                         "Como você não tomou seu remédio, você ficou doente no caminho e não chegou no trabalho")
                     recebido = 0
-                elif(personagem.sujo):
+                elif(personagem.getSujo()):
                     print(
                         "Como você estava sujo, seus colegas reclamaram para seu chefe, e você levou uma advertência.")
                     recebido *= 0.9

@@ -35,6 +35,12 @@ class Personagem:
         self.fome = True
         self.medicado = False
 
+    def getSujo(self):
+        return self.sujo
+
+    def setSujo(self, condicao):
+        self.sujo = condicao
+
 
 class Casa():
     def __init__(self):
