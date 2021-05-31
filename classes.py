@@ -52,6 +52,18 @@ class Casa():
                                   "video game": 150,
                                   "tv": 170}
 
+    def getRemedios(self):
+        return self.remedios
+
+    def setRemedios(self, quantidade):
+        self.remedios += quantidade
+
+    def getComida(self):
+        return self.comida
+
+    def setComida(self, quantidade):
+        self.comida += quantidade
+
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
 
