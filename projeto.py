@@ -23,7 +23,6 @@ if(__name__ == "__main__"):
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()
-    personagem.cafeDaManha = False
     while True:
         if dia.finalDeSemana:
             print("É final de semana! :)")
