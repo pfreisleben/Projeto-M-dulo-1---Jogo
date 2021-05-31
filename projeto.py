@@ -12,6 +12,12 @@
 # As ideias implantadas usaram os conceitos de Módulo, Classe, Variavel, Loops, Metodos, Operadores Lógicos e
 # condicionais.
 
+# A idéia principal foi melhorar e implantar novas funcionalides no projeto, ao invés de criar uma história totalmente
+# diferente, caso o personagem consiga comprar todos os móveis, ele ganha. Se for demitido, perde.
+
+# Integrantes: Pedro Freisleben, Italo, Marcio Salu Pereira
+
+
 import random
 
 
