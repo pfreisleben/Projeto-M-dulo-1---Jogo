@@ -25,6 +25,7 @@ class Personagem:
         self.salario = 100
         self.faltasTrabalho = 0
         self.desempregado = False
+        self.cafeDaManha = False
 
     def __str__(self):
         return "Você está " + ("sujo" if self.sujo else "limpo")+", "+("com" if self.fome else "sem")+" fome e "+("" if self.medicado else "não ")+"tomou sua medicação. Você tem "+str(self.dinheiro)+" reais na sua conta."

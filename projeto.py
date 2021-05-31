@@ -23,7 +23,7 @@ if(__name__ == "__main__"):
     relogio = Relogio()
     personagem = Personagem()
     casa = Casa()
-    cafe_da_manha = False
+    personagem.cafeDaManha = False
     while True:
         if dia.finalDeSemana:
             print("É final de semana! :)")
@@ -51,7 +51,7 @@ if(__name__ == "__main__"):
             elif(opcao == "2"):  # Faz café da manhã
                 if(casa.comida > 0):
                     casa.comida -= 1
-                    cafe_da_manha = True
+                    personagem.cafeDaManha = True
                 else:
                     print("Não há comida em casa.")
                 relogio.avancaTempo(15)
@@ -60,7 +60,7 @@ if(__name__ == "__main__"):
                 if(personagem.dinheiro >= lanche):
                     casa.comida += 1
                     personagem.dinheiro -= lanche
-                    cafe_da_manha = True
+                    personagem.cafeDaManha = True
                     print(
                         f"O café da manhã custou {lanche} reais.")
                 else:
@@ -68,9 +68,9 @@ if(__name__ == "__main__"):
                         f"O café da manhã custa {lanche} reais, você não tem dinheiro suficiente.")
                 relogio.avancaTempo(5)
             elif(opcao == "4"):  # Toma café da manhã
-                if(cafe_da_manha):
+                if(personagem.cafeDaManha):
                     personagem.fome = False
-                    cafe_da_manha = False
+                    personagem.cafeDaManha = False
                     relogio.avancaTempo(15)
                 else:
                     print("Não tem café da manhã na sua casa.")
@@ -181,7 +181,7 @@ if(__name__ == "__main__"):
             elif(opcao == "2"):  # Faz café da manhã
                 if(casa.comida > 0):
                     casa.comida -= 1
-                    cafe_da_manha = True
+                    personagem.cafeDaManha = True
                 else:
                     print("Não há comida em casa.")
                 relogio.avancaTempo(15)
@@ -190,7 +190,7 @@ if(__name__ == "__main__"):
                 if(personagem.dinheiro >= lanche):
                     casa.comida += 1
                     personagem.dinheiro -= lanche
-                    cafe_da_manha = True
+                    personagem.cafeDaManha = True
                     print(
                         f"O café da manhã custou {lanche} reais.")
                 else:
@@ -198,9 +198,9 @@ if(__name__ == "__main__"):
                         f"O café da manhã custa {lanche} reais, você não tem dinheiro suficiente.")
                 relogio.avancaTempo(5)
             elif(opcao == "4"):  # Toma café da manhã
-                if(cafe_da_manha):
+                if(personagem.cafeDaManha):
                     personagem.fome = False
-                    cafe_da_manha = False
+                    personagem.cafeDaManha = False
                     relogio.avancaTempo(15)
                 else:
                     print("Não tem café da manhã na sua casa.")
