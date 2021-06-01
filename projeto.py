@@ -107,7 +107,7 @@ if(__name__ == "__main__"):
                 if personagem.getDinheiro() >= 140:
                     print(
                         f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
-                    personagem.getDinheiro() -= barzinho
+                    personagem.getDinheiro(-barzinho)
                     if personagem.getFome():
                         print(
                             f'Como você foi para o barzinho sem comer, você passou mal!')
@@ -160,13 +160,14 @@ if(__name__ == "__main__"):
 
             elif(opcao == "11"):  # Trabalho extra
                 extra = random.randint(150, 200)
-                if personagem.getRemedio():
-                    f"Você passou mal e não conseguiu trabalhar direito, recebeu metade do valor"
-                    print(f'Você trabalhou o dia todo e ganhou R$ {extra/2}.')
-                    personagem.setDinheiro(extra/2)
-                else:
+                print(extra)
+                if personagem.getMedicado() == True:
                     print(f'Você trabalhou o dia todo e ganhou R$ {extra}.')
                     personagem.setDinheiro(extra)
+                    
+                elif personagem.getMedicado() == False:
+                    print(f"Você passou mal e não conseguiu trabalhar direito, recebeu R$ 50.00 a menos")
+                    personagem.setDinheiro(extra-50)
                 personagem.dormir()
                 relogio = Relogio()
                 dia.avancaDia()
