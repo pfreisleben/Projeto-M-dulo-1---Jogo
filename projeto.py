@@ -248,7 +248,7 @@ if(__name__ == "__main__"):
                 print("Você foi trabalhar.")
                 print(personagem)
                 print("-=-=-")
-                recebido = personagem.salario
+                recebido = personagem.getSalario()
                 if personagem.faltasTrabalho > 5:
                     print(
                         "Como você faltou ao trabalho mais de 5 vezes, o seu chefe demitiu você. Por justa causa... ")
