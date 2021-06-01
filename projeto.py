@@ -67,7 +67,7 @@ if(__name__ == "__main__"):
                 lanche = random.randint(5, 15)
                 if(personagem.dinheiro >= lanche):
                     casa.comida += 1
-                    personagem.dinheiro -= lanche
+                    personagem.setDinheiro(-lanche)
                     personagem.cafeDaManha = True
                     print(
                         f"O café da manhã custou {lanche} reais.")
@@ -86,14 +86,14 @@ if(__name__ == "__main__"):
             elif(opcao == "5"):  # Toma remédio
                 if(casa.remedios > 0):
                     casa.remedios -= 1
-                    personagem.medicado = True
+                    personagem.setMedicado(True)
                 else:
                     print("Não tem remédio na sua casa")
                 relogio.avancaTempo(5)
             elif(opcao == "6"):  # Compra remédio
-                if(personagem.dinheiro >= 20):
+                if(personagem.getDinheiro >= 20):
                     casa.remedios += 10
-                    personagem.dinheiro -= 20
+                    personagem.setDinheiro(-20)
                     relogio.avancaTempo(10)
                     print(
                         f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
@@ -103,10 +103,10 @@ if(__name__ == "__main__"):
                     relogio.avancaTempo(5)
             elif(opcao == "7"):  # ir pro barzinho
                 barzinho = random.randint(30, 120)
-                if personagem.dinheiro >= barzinho:
+                if personagem.getDinheiro >= barzinho:
                     print(
                         f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
-                    personagem.dinheiro -= barzinho
+                    personagem.setDinheiro(-barzinho)
                 else:
                     print(
                         "Você não tem grana para ir pro bar. Ficou em casa tomando uma de boa")
@@ -116,7 +116,7 @@ if(__name__ == "__main__"):
 
             elif(opcao == "8"):  # Ir para restaurante
                 restaurante = random.randint(30, 80)
-                if personagem.dinheiro >= restaurante:
+                if personagem.getDinheiro >= restaurante:
                     print(
                         f'É final de semana e você foi pro restaurante!Você gastou {restaurante}')
                     personagem.dinheiro -= restaurante
