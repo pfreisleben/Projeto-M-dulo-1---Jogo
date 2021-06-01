@@ -265,7 +265,7 @@ if(__name__ == "__main__"):
                     print(
                         "Como você estava sujo, seus colegas reclamaram para seu chefe, e você levou uma advertência.")
                     recebido *= 0.9
-                elif(personagem.fome):
+                elif(personagem.getFome()):
                     print(
                         "Como você estava com fome, você trabalhou metade do que consegue trabalhar.")
                     recebido *= 0.5
