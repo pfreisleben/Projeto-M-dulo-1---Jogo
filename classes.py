@@ -66,6 +66,7 @@ class Personagem:
         self.salario = condicao
 
 
+
 class Casa():
     def __init__(self):
         self.remedios = 1
@@ -75,6 +76,18 @@ class Casa():
                                   "mesa": 230,
                                   "video game": 150,
                                   "tv": 170}
+
+    def getRemedios(self):
+        return self.remedios
+
+    def setRemedios(self, quantidade):
+        self.remedios += quantidade
+
+    def getComida(self):
+        return self.comida
+
+    def setComida(self, quantidade):
+        self.comida += quantidade
 
     def estoque(self):
         return f"Você tem {self.remedios} remedio(s) e {self.comida} alimentos"
@@ -107,8 +120,8 @@ class Casa():
 
 class Dia:
     def __init__(self):
-        self.dia = 1
-        self.finalDeSemana = False
+        self.dia = 6
+        self.finalDeSemana = True
 
     def __str__(self):
         return f"{self.dia}, {self.semana()}"
