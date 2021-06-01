@@ -160,7 +160,6 @@ if(__name__ == "__main__"):
 
             elif(opcao == "11"):  # Trabalho extra
                 extra = random.randint(150, 200)
-                print(extra)
                 if personagem.getMedicado() == True:
                     print(f'Você trabalhou o dia todo e ganhou R$ {extra}.')
                     personagem.setDinheiro(extra)
