@@ -107,11 +107,7 @@ if(__name__ == "__main__"):
                 if personagem.getDinheiro() >= 140:
                     print(
                         f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
-<<<<<<< HEAD
-                    personagem.getDinheiro()-= barzinho
-=======
-                    personagem.getDinheiro(-barzinho)
->>>>>>> 4b1c9897c219cdc257fbc61643e8a4c0ab0aeab1
+                    personagem.setDinheiro(-barzinho)
                     if personagem.getFome():
                         print(
                             f'Como você foi para o barzinho sem comer, você passou mal!')
