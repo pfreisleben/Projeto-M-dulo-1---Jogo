@@ -42,6 +42,7 @@ class Personagem:
         self.sujo = condicao
 
 
+
 class Casa():
     def __init__(self):
         self.remedios = 1
@@ -95,8 +96,8 @@ class Casa():
 
 class Dia:
     def __init__(self):
-        self.dia = 1
-        self.finalDeSemana = False
+        self.dia = 6
+        self.finalDeSemana = True
 
     def __str__(self):
         return f"{self.dia}, {self.semana()}"

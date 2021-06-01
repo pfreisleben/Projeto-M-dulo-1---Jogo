@@ -105,7 +105,7 @@ if(__name__ == "__main__"):
                 barzinho = random.randint(30, 90)
                 if personagem.dinheiro >= 140:
                     print(
-                        f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
+                        f'É final de semana e você foi pro barzinho! Você gastou R${barzinho}')
                     personagem.dinheiro -= barzinho
                     if personagem.getFome():
                         print(
