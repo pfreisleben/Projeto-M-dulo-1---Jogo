@@ -1,3 +1,6 @@
+# Integrantes: Pedro Freisleben, Italo Trindade, Marcio Salu Pereira
+
+
 # Ideias implementadas:
 # Chequar estoque de comida e remédio.
 # Compra de móveis, validando estoque disponivel, dinheiro, e caso compre tudo, ganha o jogo.
@@ -16,7 +19,7 @@
 # A idéia principal foi melhorar e implementar novas funcionalidades no projeto, ao invés de criar uma história totalmente
 # diferente, caso o personagem consiga comprar todos os móveis, ele ganha. Se for demitido, perde.
 
-# Integrantes: Pedro Freisleben, Italo Trindade, Marcio Salu Pereira
+
 # Criamos um projeto no git e todos os integrantes do projeto foram adicionados como colaboradores, então todas as
 # alterações foram feitas através de commits, sincronizando todo o trabalho. Definimos as tarefas do projeto
 # através de reuniões no zoom e contato no WhatsApp.
