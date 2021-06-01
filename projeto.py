@@ -230,6 +230,7 @@ if(__name__ == "__main__"):
                 if(casa.getRemedios() > 0):
                     casa.setRemedios(-1)
                     personagem.setMedicado(True)
+                else:
                     print("Não tem remédio na sua casa")
                 relogio.avancaTempo(5)
             elif(opcao == "6"):  # Compra remédio
