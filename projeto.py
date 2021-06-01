@@ -1,8 +1,8 @@
-# Ideias implantadas:
-# Opção 8 - Chequar estoque de comida e remédio
+# Ideias implementadas:
+# Opção 8 - Checar estoque de comida e remédio
 # Opção 9 - Compra de móveis, validando estoque disponivel, dinheiro, e caso compre tudo, ganha o jogo.
 # Variar o preço do café da manhã
-# Criação da classe "Dia", responsavél por armazenar a data, e valida se é final de semana ou não.
+# Criação da classe "Dia", responsávl por armazenar a data, e valida se é final de semana ou não.
 # Caso vá dormir sem trabalhar, adiciona uma falta ao trabalho(caso não seja final de semana)
 # Caso seja final de semana, não pode trabalhar, e a opção desaparece do menu.
 # Caso falte mais de 5 vezes no trabalho, é demitido e perde o Jogo.
@@ -10,10 +10,10 @@
 # Opção 10 - O personagem pode dormir direto, avançando um dia.
 # Criado menu adaptado para o final de semana, com opções únicas.
 
-# As ideias implantadas usaram os conceitos de Encapsulamento, Módulo, Classe, Variavel, Loops, Metodos, Operadores Lógicos e
+# As ideias implementadas usaram os conceitos de Encapsulamento, Módulo, Classe, Variável, Loops, Métodos, Operadores Lógicos e
 # condicionais.
 
-# A idéia principal foi melhorar e implantar novas funcionalidades no projeto, ao invés de criar uma história totalmente
+# A idéia principal foi melhorar e implementar novas funcionalidades no projeto, ao invés de criar uma história totalmente
 # diferente, caso o personagem consiga comprar todos os móveis, ele ganha. Se for demitido, perde.
 
 # Integrantes: Pedro Freisleben, Italo, Marcio Salu Pereira
