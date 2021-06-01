@@ -85,7 +85,7 @@ if(__name__ == "__main__"):
                     relogio.avancaTempo(5)
             elif(opcao == "5"):  # Toma remédio
                 if(casa.getRemedios() > 0):
-                    casa.setRemedios(1)
+                    casa.setRemedios(-1)
                     personagem.setMedicado(True)
                 else:
                     print("Não tem remédio na sua casa")
@@ -228,8 +228,8 @@ if(__name__ == "__main__"):
                     relogio.avancaTempo(5)
             elif(opcao == "5"):  # Toma remédio
                 if(casa.getRemedios() > 0):
-                    casa.setRemedios(1)
-                    personagem.setMedicado
+                    casa.setRemedios(-1)
+                    personagem.setMedicado(True)
                     print("Não tem remédio na sua casa")
                 relogio.avancaTempo(5)
             elif(opcao == "6"):  # Compra remédio
