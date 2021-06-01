@@ -164,9 +164,10 @@ if(__name__ == "__main__"):
                 if personagem.getMedicado() == True:
                     print(f'Você trabalhou o dia todo e ganhou R$ {extra}.')
                     personagem.setDinheiro(extra)
-                    
+
                 elif personagem.getMedicado() == False:
-                    print(f"Você passou mal e não conseguiu trabalhar direito, recebeu R$ 50.00 a menos")
+                    print(
+                        f"Você passou mal e não conseguiu trabalhar direito, recebeu R$ 50.00 a menos")
                     personagem.setDinheiro(extra-50)
                 personagem.dormir()
                 relogio = Relogio()
@@ -235,7 +236,7 @@ if(__name__ == "__main__"):
             elif(opcao == "6"):  # Compra remédio
                 if(personagem.getDinheiro() >= 20):
                     casa.setRemedios(10)
-                    personagem.setdinheiro(-20)
+                    personagem.setDinheiro(-20)
                     relogio.avancaTempo(10)
                     print(
                         f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
