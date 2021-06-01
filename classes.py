@@ -40,31 +40,30 @@ class Personagem:
 
     def setSujo(self, condicao):
         self.sujo = condicao
-    
+
     def getFome(self):
         return self.fome
-    
+
     def setFome(self, condicao):
         self.fome = condicao
 
     def getMedicado(self):
         return self.medicado
-    
+
     def setMedicado(self, condicao):
         self.medicado = condicao
-    
+
     def getDinheiro(self):
         return self.dinheiro
-    
-    def setDinheiro(self, condicao):
-        self.dinheiro = condicao
+
+    def setDinheiro(self, valor):
+        self.dinheiro += valor
 
     def getSalario(self):
         return self.salario
-    
-    def setSalario(self, condicao):
-        self.salario = condicao
 
+    def setSalario(self, valor):
+        self.salario += valor
 
 
 class Casa():

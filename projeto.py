@@ -66,13 +66,8 @@ if(__name__ == "__main__"):
             elif(opcao == "3"):  # Pede café da manhã
                 lanche = random.randint(5, 15)
                 if(personagem.dinheiro >= lanche):
-<<<<<<< HEAD
                     casa.comida += 1
                     personagem.setDinheiro(-lanche)
-=======
-                    casa.setComida(1)
-                    personagem.dinheiro -= lanche
->>>>>>> a895e715313cd11849c7d4513bfb84b176251384
                     personagem.cafeDaManha = True
                     print(
                         f"O café da manhã custou {lanche} reais.")
@@ -89,29 +84,18 @@ if(__name__ == "__main__"):
                     print("Não tem café da manhã na sua casa.")
                     relogio.avancaTempo(5)
             elif(opcao == "5"):  # Toma remédio
-<<<<<<< HEAD
                 if(casa.remedios > 0):
                     casa.remedios -= 1
                     personagem.setMedicado(True)
-=======
-                if(casa.getRemedios() > 0):
-                    casa.setRemedios(1)
-                    personagem.medicado = True
->>>>>>> a895e715313cd11849c7d4513bfb84b176251384
                 else:
                     print("Não tem remédio na sua casa")
                 relogio.avancaTempo(5)
             elif(opcao == "6"):  # Compra remédio
-<<<<<<< HEAD
-                if(personagem.getDinheiro >= 20):
+                if(personagem.getDinheiro() >= 20):
                     casa.remedios += 10
                     personagem.setDinheiro(-20)
-=======
-                if(personagem.dinheiro >= 20):
-                    casa.setRemedios(10)
-                    personagem.dinheiro -= 20
->>>>>>> a895e715313cd11849c7d4513bfb84b176251384
                     relogio.avancaTempo(10)
+                    print(personagem.getDinheiro())
                     print(
                         f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
                 else:
@@ -119,25 +103,11 @@ if(__name__ == "__main__"):
                         f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.dinheiro}.")
                     relogio.avancaTempo(5)
             elif(opcao == "7"):  # ir pro barzinho
-<<<<<<< HEAD
                 barzinho = random.randint(30, 120)
-                if personagem.getDinheiro >= barzinho:
+                if personagem.getDinheiro() >= barzinho:
                     print(
                         f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
                     personagem.setDinheiro(-barzinho)
-=======
-                barzinho = random.randint(30, 90)
-                if personagem.dinheiro >= 140:
-                    print(
-                        f'É final de semana e você foi pro barzinho! Você gastou R${barzinho}')
-                    personagem.dinheiro -= barzinho
-                    if personagem.getFome():
-                        print(
-                            f'Como você foi para o barzinho sem comer, você passou mal!')
-                        print(
-                            f'Você vomitou no carro do Uber, e precisou pagar R$ 50')
-                        personagem.dinheiro -= 50
->>>>>>> a895e715313cd11849c7d4513bfb84b176251384
                 else:
                     print(
                         "Você não tem grana para ir pro bar. Ficou em casa tomando uma de boa")
