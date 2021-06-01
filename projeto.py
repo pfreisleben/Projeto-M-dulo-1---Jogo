@@ -65,7 +65,7 @@ if(__name__ == "__main__"):
                 relogio.avancaTempo(15)
             elif(opcao == "3"):  # Pede café da manhã
                 lanche = random.randint(5, 15)
-                if(personagem.dinheiro >= lanche):
+                if(personagem.getDinheiro() >= lanche):
                     personagem.setDinheiro(-lanche)
                     casa.setComida(1)
                     personagem.cafeDaManha = True
@@ -97,23 +97,23 @@ if(__name__ == "__main__"):
                     relogio.avancaTempo(10)
                     print(personagem.getDinheiro())
                     print(
-                        f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.dinheiro}")
+                        f"A cartela com 10 remédios custa 20 reais, você ficou com {personagem.getDinheiro()}")
                 else:
                     print(
-                        f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.dinheiro}.")
+                        f"A cartela com 10 remédios custa 20 reais, e você tem apenas {personagem.getDinheiro()}.")
                     relogio.avancaTempo(5)
             elif(opcao == "7"):  # ir pro barzinho
                 barzinho = random.randint(30, 90)
-                if personagem.dinheiro >= 140:
+                if personagem.getDinheiro() >= 140:
                     print(
                         f'É final de semana e você foi pro barzinho!Você gastou {barzinho}')
-                    personagem.dinheiro -= barzinho
+                    personagem.getDinheiro() -= barzinho
                     if personagem.getFome():
                         print(
                             f'Como você foi para o barzinho sem comer, você passou mal!')
                         print(
                             f'Você vomitou no carro do Uber, e precisou pagar R$ 50')
-                        personagem.dinheiro -= 50
+                        personagem.setDinheiro(-50)
                 else:
                     print(
                         "Você não tem grana para ir pro bar. Ficou em casa tomando uma de boa")
