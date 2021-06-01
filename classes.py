@@ -119,8 +119,8 @@ class Casa():
 
 class Dia:
     def __init__(self):
-        self.dia = 6
-        self.finalDeSemana = True
+        self.dia = 1
+        self.finalDeSemana = False
 
     def __str__(self):
         return f"{self.dia}, {self.semana()}"
