@@ -18,7 +18,8 @@
 
 # Integrantes: Pedro Freisleben, Italo, Marcio Salu Pereira
 # Criamos um projeto no git e todos os integrantes do projeto foram adicionados como colaboradores, então todas as
-# alterações foram feitas através de commits, sincronizando todo o trabalho. Definimos
+# alterações foram feitas através de commits, sincronizando todo o trabalho. Definimos as tarefas do projeto
+# através de reuniões no zoom e contato no WhatsApp.
 
 
 import random
