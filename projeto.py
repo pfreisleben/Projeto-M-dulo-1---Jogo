@@ -66,10 +66,8 @@ if(__name__ == "__main__"):
             elif(opcao == "3"):  # Pede café da manhã
                 lanche = random.randint(5, 15)
                 if(personagem.dinheiro >= lanche):
-                    casa.comida += 1
                     personagem.setDinheiro(-lanche)
                     casa.setComida(1)
-                    personagem.dinheiro -= lanche
                     personagem.cafeDaManha = True
                     print(
                         f"O café da manhã custou {lanche} reais.")
@@ -138,7 +136,7 @@ if(__name__ == "__main__"):
 
             elif(opcao == "9"):  # Futebol
                 futebol = random.randint(10, 35)
-                
+
                 if 10 <= personagem.dinheiro <= 35:
                     print(
                         f'É final de semana e você foi pro futebol!Você gastou {futebol}')
