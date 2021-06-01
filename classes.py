@@ -105,7 +105,7 @@ class Casa():
                 if escolha_do_movel in self.estoque_de_moveis:
                     preco = self.estoque_de_moveis.get(escolha_do_movel)
                     if preco <= personagem.dinheiro:
-                        personagem.dinheiro -= preco
+                        personagem.setDinheiro(-preco)
                         self.ja_tem.append(escolha_do_movel)
                         self.estoque_de_moveis.pop(escolha_do_movel)
                         print(
