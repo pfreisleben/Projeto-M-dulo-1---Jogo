@@ -24,7 +24,6 @@ class Personagem:
         self.dinheiro = 100
         self.salario = 100
         self.faltasTrabalho = 0
-        self.desempregado = False
         self.cafeDaManha = False
 
     def __str__(self):
